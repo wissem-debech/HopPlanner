@@ -12,12 +12,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {MatIconModule} from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    InscriptionComponent
   ],
   imports: [
     FlexLayoutModule,
