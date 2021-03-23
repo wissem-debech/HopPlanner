@@ -13,13 +13,17 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { PatientComponent } from './patient/patient.component';
+import { CosultationComponent } from './cosultation/cosultation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    PatientComponent,
+    CosultationComponent
   ],
   imports: [
     FlexLayoutModule,
