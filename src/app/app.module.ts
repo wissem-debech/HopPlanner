@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { PatientComponent } from './patient/patient.component';
 import { CosultationComponent } from './cosultation/cosultation.component';
+import { Inscription2Component } from './inscription2/inscription2.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CosultationComponent } from './cosultation/cosultation.component';
     LoginComponent,
     InscriptionComponent,
     PatientComponent,
-    CosultationComponent
+    CosultationComponent,
+    Inscription2Component
   ],
   imports: [
     FlexLayoutModule,

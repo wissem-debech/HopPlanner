@@ -1,1 +1,68 @@
-<p>inscription works!</p>
+<form  class="example-form"class="h-100" fxLayoutAlign="center center"  >
+<div >
+  <mat-card>
+    <mat-card-title  fxLayoutAlign="center"> <h2>Inscription</h2></mat-card-title>
+   <div fxLayoutAlign="space-between start" fxLayoutGap="20px" >
+    <mat-form-field appearance="outline" >
+       <mat-label>tapez votre Nom</mat-label>
+       <input type="text" matInput placeholder="Placeholder">
+       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+       <mat-label>tapez votre Prenom</mat-label>
+        <input type="text" matInput placeholder="Placeholder">
+       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+   
+  </div>
+    <div fxLayoutAlign="space-between start" fxLayoutGap="20px">
+      <mat-form-field appearance="outline">
+        <mat-label>Adress</mat-label>
+        <input type="text" matInput placeholder="Placeholder">
+        <mat-icon matSuffix>location_city
+        </mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>telephone </mat-label>
+        <input type="number" matInput placeholder="Placeholder">
+        <mat-icon matSuffix>local_phone
+        </mat-icon>
+      </mat-form-field>
+      </div>
+     <div fxLayoutAlign="space-between start" fxLayoutGap="20px">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput [formControl]="emailFormControl">
+          <mat-icon matSuffix>alternate_email</mat-icon>
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+     
+     </div>
+      <div fxLayoutAlign="space-between start" fxLayoutGap="20px">
+        <mat-form-field appearance="outline">
+          <mat-label>date de naissance </mat-label>
+            <input type="date" matInput placeholder="Placeholder">
+             </mat-form-field>  
+             <mat-card-actions>
+              <button mat-raised-button color="accent" >next</button>
+              <button mat-raised-button color="accent" >Annuller</button>
+            </mat-card-actions>
+      </div>
+  
+      
+</mat-card>
+</div>
+</form>
