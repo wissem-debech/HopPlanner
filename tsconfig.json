@@ -2,9 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-  
-    "noImplicitAny": false,
-        "baseUrl": "./",
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -24,8 +22,6 @@
     ]
   },
   "angularCompilerOptions": {
-    "enableIvy": false,
-
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

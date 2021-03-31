@@ -16,9 +16,6 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { PatientComponent } from './patient/patient.component';
 import { CosultationComponent } from './cosultation/cosultation.component';
 import { Inscription2Component } from './inscription2/inscription2.component';
-import { ModalComponent } from './modal/modal.component';
-import { TabMedecinComponent } from './tab-medecin/tab-medecin.component';
-import { ProfilPatientComponent } from './profil-patient/profil-patient.component';
 
 
 @NgModule({
@@ -28,13 +25,8 @@ import { ProfilPatientComponent } from './profil-patient/profil-patient.componen
     InscriptionComponent,
     PatientComponent,
     CosultationComponent,
-    Inscription2Component,
-    ModalComponent,
-    TabMedecinComponent,
-    ProfilPatientComponent
+    Inscription2Component
   ],
-  exports: [
-    ModalComponent, TabMedecinComponent,ProfilPatientComponent ],
   imports: [
     FlexLayoutModule,
     MatIconModule,
@@ -48,7 +40,7 @@ import { ProfilPatientComponent } from './profil-patient/profil-patient.componen
     MatangModule,
     BrowserAnimationsModule
   ],
-  providers: [], 
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
