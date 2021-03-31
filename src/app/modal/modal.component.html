@@ -1,0 +1,9 @@
+
+  <h2 mat-dialog-title>confirmer la supprission</h2>
+  <mat-dialog-content class="mat-typography">
+   {{medecin.symbol}}
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close style="color: red;" >oui</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>non</button>
+  </mat-dialog-actions>
