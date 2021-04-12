@@ -1,0 +1,13 @@
+
+  
+   
+   <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <h5>{{medecin.symbol}}</h5>
+
+    <button mat-stroked-button (click)="file.click()">
+        <mat-icon>add_a_photo</mat-icon>
+        <input (change)="onChange($event)" visbility="hidden" #file type="file" name="file" accept="image/*">
+
+    </button>
+
+</mat-toolbar>

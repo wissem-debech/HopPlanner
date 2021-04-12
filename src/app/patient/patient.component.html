@@ -10,16 +10,7 @@
       <th mat-header-cell *matHeaderCellDef> No. </th>
       <td mat-cell *matCellDef="let element"> {{element.position}} </td>
     </ng-container>
-   <!-- button column -->
-   <ng-container matColumnDef="edit">
-    <th mat-header-cell *matHeaderCellDef> Edit </th>
-    <td mat-cell *matCellDef="let element"> {{element.Edit}} </td>
-  </ng-container>
-   <!-- Position Column -->
-   <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-  </ng-container>
+ 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -45,5 +36,11 @@
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
     </tr>
+      <!-- button column -->
+   <ng-container matColumnDef="Edit">
+    <th mat-header-cell *matHeaderCellDef> Edit </th>
+    <td mat-cell *matCellDef="let element"> {{element.Edit}} </td>
+  </ng-container>
+ 
   </table>
-  
+  <app-buttonajoutpatient></app-buttonajoutpatient>
