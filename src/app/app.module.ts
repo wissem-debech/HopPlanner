@@ -24,6 +24,11 @@ import { CorpHumainComponent } from './corp-humain/corp-humain.component';
 import { SymptomeTeteComponent } from './symptome-tete/symptome-tete.component';
 import { ModalajoutpatientComponent } from './modalajoutpatient/modalajoutpatient.component';
 import { ButtonajoutmedecinComponent } from './buttonajoutmedecin/buttonajoutmedecin.component';
+import { SidebarsecretaireComponent } from './sidebarsecretaire/sidebarsecretaire.component';
+import { ButtonajoutpatientComponent } from './buttonajoutpatient/buttonajoutpatient.component';
+import { Modalajoutpatient2Component } from './modalajoutpatient2/modalajoutpatient2.component';
+import { ProfilsecretaireComponent } from './profilsecretaire/profilsecretaire.component';
+import { CardsecretaireComponent } from './cardsecretaire/cardsecretaire.component';
 
 
 
@@ -42,9 +47,14 @@ import { ButtonajoutmedecinComponent } from './buttonajoutmedecin/buttonajoutmed
     SymptomeTeteComponent,
     ModalajoutpatientComponent,
     ButtonajoutmedecinComponent,
+    SidebarsecretaireComponent,
+    ButtonajoutpatientComponent,
+    Modalajoutpatient2Component,
+    ProfilsecretaireComponent,
+    CardsecretaireComponent
   ],
   exports: [ 
-    ModalComponent, TabMedecinComponent,ProfilPatientComponent, SymptomeTeteComponent,ModalajoutpatientComponent,ButtonajoutmedecinComponent ],
+    ModalComponent, TabMedecinComponent,ProfilPatientComponent, SymptomeTeteComponent,ModalajoutpatientComponent,ButtonajoutmedecinComponent ,SidebarsecretaireComponent],
   imports: [
     FlexLayoutModule,
     MatIconModule,
@@ -63,7 +73,8 @@ import { ButtonajoutmedecinComponent } from './buttonajoutmedecin/buttonajoutmed
   providers: [], 
   bootstrap: [AppComponent],
   entryComponents: [
-    ModalajoutpatientComponent
+    ModalajoutpatientComponent,
+    Modalajoutpatient2Component
   ],
 })
 export class AppModule { }

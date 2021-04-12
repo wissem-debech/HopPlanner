@@ -1,0 +1,53 @@
+<div fxLayout="column" fxLayoutAlign="space-between center" >
+    <div fxLayoutAlign="space-between center" >
+    <mat-toolbar  fxLayoutAlign="space-around center" >
+    
+    
+      <button mat-stroked-button (click)="file.click()">
+          <mat-icon>add_a_photo</mat-icon>
+          <input (change)="onChange($event)" visbility="hidden" appearance="fill" #file type="file" name="file" accept="image/*" >  </button>
+        
+          
+    </mat-toolbar> 
+    </div>
+    <div fxLayoutAlign="space-between center"  >
+    
+    <table cellspacing="20" ><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>nom</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>prenom</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="demo-full-width" appearance="fill">
+          <mat-label>sexe</mat-label>
+          <mat-radio-group  >
+            <mat-select [(value)]="selected">
+              <mat-option value="option1"> <mat-radio-button value="1">femme</mat-radio-button>
+              </mat-option>
+              <mat-option value="option2"><mat-radio-button value="2">homme</mat-radio-button>
+              </mat-option>
+            </mat-select>
+            </mat-radio-group>
+      
+        </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>maladie</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr>
+
+    </table></div>
+    <div fxLayout="column" fxLayoutAlign="space-between center" >
+      <div fxLayoutAlign="space-between center" >
+      <mat-toolbar >      <mat-label>date de naissance :</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      </mat-toolbar></div></div>
+ 
