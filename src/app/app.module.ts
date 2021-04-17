@@ -53,7 +53,7 @@ import { ModalSuppPatientComponent } from './modal-supp-patient/modal-supp-patie
     Modalajoutpatient2Component,
     ProfilsecretaireComponent,
     CardsecretaireComponent,
-    SympthomeventreComponent
+    SympthomeventreComponent,
     EditpatientComponent,
     ModalSuppPatientComponent
   ],
