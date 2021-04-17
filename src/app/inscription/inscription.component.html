@@ -1,5 +1,10 @@
-<form  class="example-form"class="h-100" fxLayoutAlign="center center"  >
-<div >
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+<form  class="example-form"class="h-100" fxLayoutAlign="center center" [formGroup]="firstFormGroup" >
+  <ng-template matStepLabel>Fill out your name</ng-template>
+  
+  <div >
   <mat-card>
     <mat-card-title  fxLayoutAlign="center"> <h2>Inscription</h2></mat-card-title>
    <div fxLayoutAlign="space-between start" fxLayoutGap="20px" >
@@ -65,4 +70,52 @@
       
 </mat-card>
 </div>
+<div>
+  <button mat-button matStepperNext>Next</button>
+</div>
 </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+    <form [formGroup]="secondFormGroup">
+      <div fxLayout="row" fxLayoutAlign="space-evenly center" >
+
+      <div >
+        <mat-card>
+          <mat-card-title  fxLayoutAlign="center"> <h2>Inscription</h2></mat-card-title>
+         <div fxLayoutAlign="space-between start" fxLayoutGap="20px" >
+          <mat-form-field appearance="fill">
+              <mat-label>Symptome</mat-label>
+              <mat-select>
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          <mat-form-field appearance="fill">
+              <mat-label>Spicialiter</mat-label>
+              <mat-select>
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+           
+          </mat-form-field>
+         
+        </div>
+            <div fxLayoutAlign="space-between start" fxLayoutGap="20px">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Message</mat-label>
+                          <textarea matInput></textarea>
+                  </mat-form-field>
+                   <mat-card-actions>
+                    <button mat-raised-button color="accent" >S'inscrire</button>
+                  </mat-card-actions>
+            </div>
+        
+            
+      </mat-card>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+      </div>
+      </form>
+  </mat-step>
+   </mat-horizontal-stepper>

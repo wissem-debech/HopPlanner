@@ -28,6 +28,7 @@ import { ButtonajoutpatientComponent } from './buttonajoutpatient/buttonajoutpat
 import { Modalajoutpatient2Component } from './modalajoutpatient2/modalajoutpatient2.component';
 import { ProfilsecretaireComponent } from './profilsecretaire/profilsecretaire.component';
 import { CardsecretaireComponent } from './cardsecretaire/cardsecretaire.component';
+import { SympthomeventreComponent } from './sympthomeventre/sympthomeventre.component';
 import { EditpatientComponent } from './editpatient/editpatient.component';
 import { ModalSuppPatientComponent } from './modal-supp-patient/modal-supp-patient.component';
 
@@ -52,6 +53,7 @@ import { ModalSuppPatientComponent } from './modal-supp-patient/modal-supp-patie
     Modalajoutpatient2Component,
     ProfilsecretaireComponent,
     CardsecretaireComponent,
+    SympthomeventreComponent
     EditpatientComponent,
     ModalSuppPatientComponent
   ],

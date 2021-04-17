@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {SymptomeTeteComponent} from '../symptome-tete/symptome-tete.component'
+
 interface Car {
   value: string;
   viewValue: string;
@@ -10,7 +13,14 @@ interface Car {
 })
 export class CorpHumainComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+
+  openDialog() {
+    this.dialog.open(SymptomeTeteComponent);
+  }
+
+
+
 
   ngOnInit(): void {
   }

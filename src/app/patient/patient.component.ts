@@ -5,22 +5,23 @@ import { EditpatientComponent } from '../editpatient/editpatient.component';
 import { ModalSuppPatientComponent } from '../modal-supp-patient/modal-supp-patient.component';
 import { ModalajoutpatientComponent } from '../modalajoutpatient/modalajoutpatient.component';
 export interface PeriodicElement {
-  name: string;
   position: number;
-  weight: number;
+
+  name: string;
+  weight: string;
   symbol: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 1, name: 'mohamed', weight: 'benamor', symbol: 'hépatite c'},
+  {position: 2, name: 'khalil', weight: 'chatti', symbol: 'hérnie discal'},
+  {position: 3, name: 'laila', weight: 'ben saad', symbol: 'insomnie'},
+  {position: 4, name: 'mouna', weight: 'dakhlaoui', symbol: 'kyste ovarien'},
+  {position: 5, name: 'sara', weight: 'benameur', symbol: 'parkinson'},
+  {position: 6, name: 'samar', weight: 'benamor', symbol: 'tendinite'},
+  {position: 7, name: 'khadija', weight: 'boujnah', symbol: 'anémie'},
+  {position: 8, name: 'mourad', weight: 'ben chaaben', symbol: 'varicocéle'},
+  {position: 9, name: 'nour', weight: 'ben abdallah', symbol: 'cancer'},
+  {position: 10, name: 'kais', weight: 'sliti', symbol: 'insuffisance rénale'},
 ];
 
 @Component({

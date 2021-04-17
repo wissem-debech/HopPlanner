@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
+
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.component.html',
@@ -7,13 +9,24 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class InscriptionComponent implements OnInit {
  
-  constructor() { }
 
-  ngOnInit(): void {
-  }
   hide = true;
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
   ]);
+  isLinear = false;
+  firstFormGroup: FormGroup | undefined;
+  secondFormGroup: FormGroup | undefined;
+
+  constructor(private _formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+  }
 }

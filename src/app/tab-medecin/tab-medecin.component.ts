@@ -6,16 +6,16 @@ import { ModalComponent } from '../modal/modal.component';
 import { ModalajoutpatientComponent } from '../modalajoutpatient/modalajoutpatient.component';
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, name: 'Hydrogen', specialite:'neurologue', symbol: 'H'},
-  {id: 2, name: 'Helium', specialite:'neurologue', symbol: 'He'},
-  {id: 3, name: 'Lithium', specialite:'neurologue', symbol: 'Li'},
-  {id: 4, name: 'Beryllium', specialite:'neurologue', symbol: 'Be'},
-  {id: 5, name: 'Boron', specialite:'neurologue', symbol: 'B'},
-  {id: 6, name: 'Carbon', specialite:'neurologue', symbol: 'C'},
-  {id: 7, name: 'Nitrogen',specialite:'neurologue', symbol: 'N'},
-  {id: 8, name: 'Oxygen', specialite:'neurologue', symbol: 'O'},
-  {id: 9, name: 'Fluorine', specialite:'neurologue', symbol: 'F'},
-  {id: 10, name: 'Neon', specialite:'neurologue', symbol: 'Ne'},
+  {id: 1, name: 'hanen', specialite:'cardiologue', grade: 'H'},
+  {id: 2, name: 'donia', specialite:'neurologue', grade: 'He'},
+  {id: 3, name: 'boutheina', specialite:'dermatologue', grade: 'Li'},
+  {id: 4, name: 'mourad', specialite:'geriatre', grade: 'Be'},
+  {id: 5, name: 'samir', specialite:'psychiare', grade: 'B'},
+  {id: 6, name: 'mounir', specialite:'nephrologue', grade: 'C'},
+  {id: 7, name: 'nader',specialite:'odontologue', grade: 'N'},
+  {id: 8, name: 'khaled', specialite:'pédiatre', grade: 'O'},
+  {id: 9, name: 'raed', specialite:'pneumologue', grade: 'F'},
+  {id: 10, name: 'sirine', specialite:'urologue', grade: 'Ne'},
 ];
 export interface PeriodicElement {
   
@@ -24,7 +24,7 @@ export interface PeriodicElement {
   
   
   specialite: string;
-  symbol: string;
+  grade: string;
   
 }
 @Component({
@@ -82,7 +82,7 @@ applyFilter(event: Event) {
     this.dataSource.sort = this.sort;
   }
 
-  displayedColumns: string[] = ['id','name', 'specialitée', 'symbol','Edit' ,'Delete'];
+  displayedColumns: string[] = ['id','name', 'specialitée', 'grade','Edit' ,'Delete'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   desserts: any;
   sortedData: any;
