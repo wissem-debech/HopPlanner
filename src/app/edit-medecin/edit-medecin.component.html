@@ -2,7 +2,7 @@
     <div>  
         <mat-form-field appearance="outline">
             <mat-label></mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="patient.nom">
+            <input matInput placeholder="Placeholder" [(ngModel)]="medecin.name">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-hint></mat-hint>
          </mat-form-field>
@@ -10,7 +10,7 @@
     <div>
         <mat-form-field appearance="outline">
             <mat-label> </mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="patient.prenom">
+            <input matInput placeholder="Placeholder" [(ngModel)]="medecin.specialite">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-hint></mat-hint>
          </mat-form-field>
@@ -18,14 +18,13 @@
     <div>
         <mat-form-field appearance="outline">
             <mat-label></mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="patient.maladie">
+            <input matInput placeholder="Placeholder" [(ngModel)]="medecin.grade">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-hint></mat-hint>
          </mat-form-field>
     </div>
     <div fxLayoutAlign="space-around start">
-        <button mat-stroked-button (click)="openSnackBar('Patient Modifié avec succès', 'Fermer')">confirme</button>
+        <button mat-stroked-button (click)="openSnackBar('medecin Modifié avec succès', 'Fermer')">confirme</button>
         <button mat-button mat-dialog-close>Annuler</button>
     </div>
     </div>
-    

@@ -22,15 +22,17 @@ import { TabMedecinComponent } from './tab-medecin/tab-medecin.component';
 import { CorpHumainComponent } from './corp-humain/corp-humain.component';
 import { SymptomeTeteComponent } from './symptome-tete/symptome-tete.component';
 import { ModalajoutpatientComponent } from './modalajoutpatient/modalajoutpatient.component';
-import { ButtonajoutmedecinComponent } from './buttonajoutmedecin/buttonajoutmedecin.component';
 import { SidebarsecretaireComponent } from './sidebarsecretaire/sidebarsecretaire.component';
 import { ButtonajoutpatientComponent } from './buttonajoutpatient/buttonajoutpatient.component';
 import { Modalajoutpatient2Component } from './modalajoutpatient2/modalajoutpatient2.component';
 import { ProfilsecretaireComponent } from './profilsecretaire/profilsecretaire.component';
 import { CardsecretaireComponent } from './cardsecretaire/cardsecretaire.component';
 import { SympthomeventreComponent } from './sympthomeventre/sympthomeventre.component';
-import { EditpatientComponent } from './editpatient/editpatient.component';
 import { ModalSuppPatientComponent } from './modal-supp-patient/modal-supp-patient.component';
+import { AjoutmedComponent } from './ajoutmed/ajoutmed.component';
+import { DeleteMedecinComponent } from './delete-medecin/delete-medecin.component';
+import { EditMedecinComponent } from './edit-medecin/edit-medecin.component';
+import { EditpatientComponent } from './editpatient/editpatient.component';
 
 
 
@@ -47,18 +49,20 @@ import { ModalSuppPatientComponent } from './modal-supp-patient/modal-supp-patie
     CorpHumainComponent,
     SymptomeTeteComponent,
     ModalajoutpatientComponent,
-    ButtonajoutmedecinComponent,
     SidebarsecretaireComponent,
     ButtonajoutpatientComponent,
     Modalajoutpatient2Component,
     ProfilsecretaireComponent,
     CardsecretaireComponent,
     SympthomeventreComponent,
-    EditpatientComponent,
-    ModalSuppPatientComponent
+    ModalSuppPatientComponent,
+    AjoutmedComponent,
+    DeleteMedecinComponent,
+    EditMedecinComponent,
+    EditpatientComponent
   ],
   exports: [ 
-    ModalComponent, TabMedecinComponent, SymptomeTeteComponent,ModalajoutpatientComponent,ButtonajoutmedecinComponent ,SidebarsecretaireComponent],
+    ModalComponent, TabMedecinComponent, SymptomeTeteComponent,ModalajoutpatientComponent,SidebarsecretaireComponent],
   imports: [
     FlexLayoutModule,
     MatIconModule,

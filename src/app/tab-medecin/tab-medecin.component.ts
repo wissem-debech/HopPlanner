@@ -3,9 +3,11 @@ import {MatSort} from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
-import { ModalajoutpatientComponent } from '../modalajoutpatient/modalajoutpatient.component';
+import { AjoutmedComponent } from '../ajoutmed/ajoutmed.component';
+import {DeleteMedecinComponent} from '../delete-medecin/delete-medecin.component';
+import {EditMedecinComponent } from '../edit-medecin/edit-medecin.component';
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: medecin[] = [
   {id: 1, name: 'hanen', specialite:'cardiologue', grade: 'H'},
   {id: 2, name: 'donia', specialite:'neurologue', grade: 'He'},
   {id: 3, name: 'boutheina', specialite:'dermatologue', grade: 'Li'},
@@ -17,7 +19,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {id: 9, name: 'raed', specialite:'pneumologue', grade: 'F'},
   {id: 10, name: 'sirine', specialite:'urologue', grade: 'Ne'},
 ];
-export interface PeriodicElement {
+export interface medecin {
   
   id: number;
   name: string;
@@ -37,11 +39,11 @@ export class TabMedecinComponent implements OnInit {
   }
   constructor(public dialog: MatDialog) { }
   openDialog() {
-    this.dialog.open(ModalajoutpatientComponent);
+    this.dialog.open(AjoutmedComponent);
   }
   
   openDialogm() {
-    this.dialog.open(ModalajoutpatientComponent, {
+    this.dialog.open(AjoutmedComponent, {
       width:'1000px',
       height:'600px',
 
@@ -49,8 +51,8 @@ export class TabMedecinComponent implements OnInit {
   }
 
 openEditMedecin(element:any){
-  const dialogRef = this.dialog.open(ModalComponent,{ 
-    width:'600px',
+  const dialogRef = this.dialog.open(EditMedecinComponent,{ 
+  
     data:element
   
   });
@@ -60,8 +62,7 @@ openEditMedecin(element:any){
   });
 }
 openDeleteMedecin(element:any){
-  const dialogRef = this.dialog.open(ModalComponent,{
-    width:'600px',
+  const dialogRef = this.dialog.open(DeleteMedecinComponent,{
     data:element,
     
   }

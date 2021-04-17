@@ -12,18 +12,18 @@ export interface PeriodicElement {
   
 }
 @Component({
-  selector: 'app-modalajoutpatient',
-  templateUrl: './modalajoutpatient.component.html',
-  styleUrls: ['./modalajoutpatient.component.css']
+  selector: 'app-ajoutmed',
+  templateUrl: './ajoutmed.component.html',
+  styleUrls: ['./ajoutmed.component.css']
 })
-export class ModalajoutpatientComponent implements OnInit {
+export class AjoutmedComponent implements OnInit {
+
   medecin: any;
   onChange(_$event: any){}
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.medecin=data
 
   }
-
 
   ngOnInit(): void {
   }

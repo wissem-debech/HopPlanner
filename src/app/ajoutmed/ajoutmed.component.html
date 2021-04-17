@@ -1,0 +1,40 @@
+
+<div fxLayout="column" fxLayoutAlign="space-between center" >
+    <div fxLayoutAlign="space-between center" >
+    <mat-toolbar  fxLayoutAlign="space-around center" >
+    
+    
+      <button mat-stroked-button (click)="file.click()">
+          <mat-icon>person_add_alt_1</mat-icon>
+          <input (change)="onChange($event)" visbility="hidden" appearance="fill" #file type="file" name="file" accept="image/*" >  </button>
+        
+          
+    </mat-toolbar> 
+    </div>
+    <div fxLayoutAlign="space-between center"  >
+    
+    <table cellspacing="20" ><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>nom</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>prenom</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr>
+    <tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>grade</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>specialitée</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr>
+    </table>
+    </div></div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Annuler</button>
+    </div>

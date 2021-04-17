@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ButtonajoutmedecinComponent } from './buttonajoutmedecin/buttonajoutmedecin.component';
 import { ButtonajoutpatientComponent } from './buttonajoutpatient/buttonajoutpatient.component';
 import { CorpHumainComponent } from './corp-humain/corp-humain.component';
 import { InscriptionComponent } from './inscription/inscription.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   {path :'med' , component:ModalComponent},
   {path :'corp' , component:CorpHumainComponent},
   {path :'symptete' , component:SymptomeTeteComponent},
-  {path :'ajoumed' , component:ButtonajoutmedecinComponent},
   {path :'sidenav' , component:SidebarsecretaireComponent},
   {path :'ajoupat' , component:ButtonajoutpatientComponent},
   {path :'profilsec' , component:ProfilsecretaireComponent},
