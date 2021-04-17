@@ -17,11 +17,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { PatientComponent } from './patient/patient.component';
 import { CosultationComponent } from './cosultation/cosultation.component';
 import { Inscription2Component } from './inscription2/inscription2.component';
-<<<<<<< HEAD
-=======
 import { ModalComponent } from './modal/modal.component';
 import { TabMedecinComponent } from './tab-medecin/tab-medecin.component';
-import { ProfilPatientComponent } from './profil-patient/profil-patient.component';
 import { CorpHumainComponent } from './corp-humain/corp-humain.component';
 import { SymptomeTeteComponent } from './symptome-tete/symptome-tete.component';
 import { ModalajoutpatientComponent } from './modalajoutpatient/modalajoutpatient.component';
@@ -31,8 +28,9 @@ import { ButtonajoutpatientComponent } from './buttonajoutpatient/buttonajoutpat
 import { Modalajoutpatient2Component } from './modalajoutpatient2/modalajoutpatient2.component';
 import { ProfilsecretaireComponent } from './profilsecretaire/profilsecretaire.component';
 import { CardsecretaireComponent } from './cardsecretaire/cardsecretaire.component';
+import { EditpatientComponent } from './editpatient/editpatient.component';
+import { ModalSuppPatientComponent } from './modal-supp-patient/modal-supp-patient.component';
 
->>>>>>> master
 
 
 @NgModule({
@@ -42,14 +40,9 @@ import { CardsecretaireComponent } from './cardsecretaire/cardsecretaire.compone
     InscriptionComponent,
     PatientComponent,
     CosultationComponent,
-<<<<<<< HEAD
-    Inscription2Component
-  ],
-=======
     Inscription2Component,
     ModalComponent,
     TabMedecinComponent,
-    ProfilPatientComponent,
     CorpHumainComponent,
     SymptomeTeteComponent,
     ModalajoutpatientComponent,
@@ -58,11 +51,12 @@ import { CardsecretaireComponent } from './cardsecretaire/cardsecretaire.compone
     ButtonajoutpatientComponent,
     Modalajoutpatient2Component,
     ProfilsecretaireComponent,
-    CardsecretaireComponent
+    CardsecretaireComponent,
+    EditpatientComponent,
+    ModalSuppPatientComponent
   ],
   exports: [ 
-    ModalComponent, TabMedecinComponent,ProfilPatientComponent, SymptomeTeteComponent,ModalajoutpatientComponent,ButtonajoutmedecinComponent ,SidebarsecretaireComponent],
->>>>>>> master
+    ModalComponent, TabMedecinComponent, SymptomeTeteComponent,ModalajoutpatientComponent,ButtonajoutmedecinComponent ,SidebarsecretaireComponent],
   imports: [
     FlexLayoutModule,
     MatIconModule,
@@ -78,16 +72,11 @@ import { CardsecretaireComponent } from './cardsecretaire/cardsecretaire.compone
     MatTreeModule
   
   ],
-<<<<<<< HEAD
-  providers: [],
-  bootstrap: [AppComponent]
-=======
   providers: [], 
   bootstrap: [AppComponent],
   entryComponents: [
     ModalajoutpatientComponent,
     Modalajoutpatient2Component
   ],
->>>>>>> master
 })
 export class AppModule { }

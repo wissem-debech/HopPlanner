@@ -11,15 +11,7 @@ export class ButtonajoutmedecinComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
 
-  openDialog() {
-    this.dialog.open(ModalajoutpatientComponent, {
-      width:'1000px',
-      height:'600px',
 
-      data: {
-      }
-    });
-  }
 
   ngOnInit(): void {
   }

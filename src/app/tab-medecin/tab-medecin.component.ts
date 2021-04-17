@@ -3,6 +3,7 @@ import {MatSort} from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
+import { ModalajoutpatientComponent } from '../modalajoutpatient/modalajoutpatient.component';
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {id: 1, name: 'Hydrogen', specialite:'neurologue', symbol: 'H'},
@@ -35,8 +36,17 @@ export class TabMedecinComponent implements OnInit {
   ngOnInit(){
   }
   constructor(public dialog: MatDialog) { }
+  openDialog() {
+    this.dialog.open(ModalajoutpatientComponent);
+  }
   
- 
+  openDialogm() {
+    this.dialog.open(ModalajoutpatientComponent, {
+      width:'1000px',
+      height:'600px',
+
+    });
+  }
 
 openEditMedecin(element:any){
   const dialogRef = this.dialog.open(ModalComponent,{ 

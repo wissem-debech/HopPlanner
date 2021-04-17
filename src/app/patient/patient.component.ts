@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {MatTableDataSource} from '@angular/material/table';
+import { EditpatientComponent } from '../editpatient/editpatient.component';
+import { ModalSuppPatientComponent } from '../modal-supp-patient/modal-supp-patient.component';
+import { ModalajoutpatientComponent } from '../modalajoutpatient/modalajoutpatient.component';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -25,13 +29,25 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./patient.component.css']
 })
 export class PatientComponent implements OnInit {
-
-  constructor() { }
+  openDialog() {
+    this.dialog.open(ModalajoutpatientComponent);
+  }
+openeditpatient(element : any){
+  this.dialog.open(EditpatientComponent , {
+    data : element
+  })
+ 
+}
+openmodalSuppPatient(element : any){
+  this.dialog.open(ModalSuppPatientComponent , {
+    data : element})
+}
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','Edit'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','Edit','delete'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   applyFilter(event: Event) {
@@ -40,3 +56,11 @@ export class PatientComponent implements OnInit {
   }
  
 }
+
+
+
+
+function openmodalSuppPatient(element: any, any: any) {
+  throw new Error('Function not implemented.');
+}
+

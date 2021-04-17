@@ -18,7 +18,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class Modalajoutpatient2Component implements OnInit {
 
   patient: any;
-  onChange($event){}
+  onChange(_$event: any){}
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.patient=data
 

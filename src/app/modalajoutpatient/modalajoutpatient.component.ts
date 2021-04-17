@@ -19,7 +19,7 @@ export interface PeriodicElement {
 })
 export class ModalajoutpatientComponent implements OnInit {
   medecin: any;
-  onChange($event){}
+  onChange(_$event: any){}
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.medecin=data
 

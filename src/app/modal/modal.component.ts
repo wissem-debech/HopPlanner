@@ -7,7 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent  {
-  onChange($event){}
+  onChange(_$event: any){}
   medecin : any
   constructor(public dialogRef:MatDialogRef <ModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any){

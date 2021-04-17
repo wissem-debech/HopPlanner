@@ -5,7 +5,7 @@
 
 
   <button mat-stroked-button (click)="file.click()">
-      <mat-icon>add_a_photo</mat-icon>
+      <mat-icon>person_add_alt_1</mat-icon>
       <input (change)="onChange($event)" visbility="hidden" appearance="fill" #file type="file" name="file" accept="image/*" >  </button>
     
       
@@ -35,3 +35,6 @@
 </tr>
 </table>
 </div></div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Annuler</button>
+</div>

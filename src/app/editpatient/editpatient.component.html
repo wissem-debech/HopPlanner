@@ -1,0 +1,39 @@
+<div fxLayoutAlign="space-around center">
+    <div> 
+     Name: {{patient.name}}
+    </div>
+    <div>  
+    <mat-form-field appearance="outline">
+        <mat-label>Veuillez écrire le nouveau nom</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint></mat-hint>
+     </mat-form-field>
+    </div>
+</div>
+<div fxLayoutAlign="space-around center">
+    <div> 
+     weight:
+    </div>
+    <div>  
+    <mat-form-field appearance="outline">
+        <mat-label> </mat-label>
+        <input matInput placeholder="Placeholder" [(ngModel)]="patient.weight">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint></mat-hint>
+     </mat-form-field>
+    </div>
+</div>
+<div fxLayoutAlign="space-around center">
+    
+    <div>  
+    <mat-form-field appearance="outline">
+        <mat-label>{{patient.symbol}}</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint></mat-hint>
+     </mat-form-field>
+    </div>
+</div>
+
+
