@@ -10,7 +10,10 @@ export class EditpatientComponent implements OnInit {
 patient : any
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { 
     this.patient=data;
-    this.patient.weight=data.weight;
+    this.patient.id=data.id
+    this.patient.prenom=data.prenom;
+    this.patient.maladie=data.maladie;
+    this.patient.nom=data.nom;
   }
 
   ngOnInit(): void {

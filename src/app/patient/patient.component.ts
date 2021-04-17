@@ -4,24 +4,24 @@ import {MatTableDataSource} from '@angular/material/table';
 import { EditpatientComponent } from '../editpatient/editpatient.component';
 import { ModalSuppPatientComponent } from '../modal-supp-patient/modal-supp-patient.component';
 import { ModalajoutpatientComponent } from '../modalajoutpatient/modalajoutpatient.component';
-export interface PeriodicElement {
-  position: number;
+export interface Patient {
+  id: number;
 
-  name: string;
-  weight: string;
-  symbol: string;
+  nom: string;
+  prenom: string;
+  maladie: string;
 }
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'mohamed', weight: 'benamor', symbol: 'hépatite c'},
-  {position: 2, name: 'khalil', weight: 'chatti', symbol: 'hérnie discal'},
-  {position: 3, name: 'laila', weight: 'ben saad', symbol: 'insomnie'},
-  {position: 4, name: 'mouna', weight: 'dakhlaoui', symbol: 'kyste ovarien'},
-  {position: 5, name: 'sara', weight: 'benameur', symbol: 'parkinson'},
-  {position: 6, name: 'samar', weight: 'benamor', symbol: 'tendinite'},
-  {position: 7, name: 'khadija', weight: 'boujnah', symbol: 'anémie'},
-  {position: 8, name: 'mourad', weight: 'ben chaaben', symbol: 'varicocéle'},
-  {position: 9, name: 'nour', weight: 'ben abdallah', symbol: 'cancer'},
-  {position: 10, name: 'kais', weight: 'sliti', symbol: 'insuffisance rénale'},
+const ELEMENT_DATA: Patient[] = [
+  {id: 1, nom: 'mohamed', prenom: 'benamor',maladie: 'hépatite c'},
+  {id: 2, nom: 'khalil', prenom: 'chatti',maladie: 'hérnie discal'},
+  {id: 3, nom: 'laila', prenom: 'ben saad',maladie: 'insomnie'},
+  {id: 4, nom: 'mouna', prenom: 'dakhlaoui',maladie: 'kyste ovarien'},
+  {id: 5, nom: 'sara', prenom: 'benomur',maladie: 'parkinson'},
+  {id: 6, nom: 'samar', prenom: 'benamor',maladie: 'tendinite'},
+  {id: 7, nom: 'khadija', prenom: 'boujnah',maladie: 'anémie'},
+  {id: 8, nom: 'mourad', prenom: 'ben chaaben',maladie: 'varicocéle'},
+  {id: 9, nom: 'nour', prenom: 'ben abdallah',maladie: 'cancer'},
+  {id: 10, nom: 'kais', prenom: 'sliti',maladie: 'insuffisance rénale'},
 ];
 
 @Component({
@@ -48,7 +48,7 @@ openmodalSuppPatient(element : any){
   ngOnInit(): void {
   }
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','Edit','delete'];
+  displayedColumns: string[] = ['id', 'nom', 'prenom', 'maladie','Edit','delete'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   applyFilter(event: Event) {
