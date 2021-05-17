@@ -1,44 +1,47 @@
+<!--<form (ngSubmit)="insertdataPatient()">
 <div fxLayout="column" fxLayoutAlign="space-between center" >
     <div fxLayoutAlign="space-between center" >
     <mat-toolbar  fxLayoutAlign="space-around center" >
-    
-    
-      <button mat-stroked-button (click)="file.click()">
+      <button mat-stroked-button (click)="file.click()" >
           <mat-icon>add_a_photo</mat-icon>
-          <input (change)="onChange($event)" visbility="hidden" appearance="fill" #file type="file" name="file" accept="image/*" >  </button>
-        
-          
+          <input (change)="onChange($event)" visbility="hidden" appearance="fill" #file type="file" name="file" accept="image/*"  [(ngModel)]="Patient.photo">  </button>
     </mat-toolbar> 
     </div>
     <div fxLayoutAlign="space-between center"  >
-    
     <table cellspacing="20" ><tr>
       <td><mat-form-field class="example-full-width">
+        <mat-label>id</mat-label>
+        <input matInput type="number" name="id" [(ngModel)]="Patient.id">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
         <mat-label>nom</mat-label>
-        <input matInput>
+        <input matInput type="text" name="nom" [(ngModel)]="Patient.nom">
       </mat-form-field></td>
       <td><mat-form-field class="example-full-width">
         <mat-label>prenom</mat-label>
-        <input matInput>
+        <input matInput type="text" name="prenom" [(ngModel)]="Patient.prenom">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>email</mat-label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="Patient.email">
       </mat-form-field></td>
     </tr>
     <tr>
       <td>
         <mat-form-field class="demo-full-width" appearance="fill">
           <mat-label>sexe</mat-label>
-          <mat-radio-group  >
-            <mat-select [(value)]="selected">
+        <mat-radio-group  [(ngModel)]="Patient.sexe" name="sexe">
+            <mat-select [(value)]="selected"  >
               <mat-option value="option1"> <mat-radio-button value="1">femme</mat-radio-button>
               </mat-option>
               <mat-option value="option2"><mat-radio-button value="2">homme</mat-radio-button>
               </mat-option>
             </mat-select>
-            </mat-radio-group>
-      
+            </mat-radio-group >
         </mat-form-field></td>
       <td><mat-form-field class="example-full-width">
         <mat-label>maladie</mat-label>
-        <input matInput>
+        <input matInput type="text" [(ngModel)]="Patient.maladie">
       </mat-form-field></td>
     </tr>
 
@@ -49,5 +52,42 @@
       <input matInput [matDatepicker]="picker">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
-      </mat-toolbar></div></div>
- 
+      </mat-toolbar></div></div></div></div></div></form>-->
+      <form (ngSubmit)=" insertdataPatient()" [formGroup]="myGroup">
+        <div class="form-group" [formGroup]="myGroup">
+          <label >id</label>
+          <input type="text" class="form-control" readonly formControlName="id" name="id" [(ngModel)]="Patient.id">
+          </div>
+      
+        <div class="form-group" [formGroup]="myGroup">
+        <label >nom</label>
+        <input type="text" class="form-control" formControlName="nom" name="nom" [(ngModel)]="Patient.nom">
+        </div>
+        <div class="form-group" [formGroup]="myGroup">
+          <label >prénom</label>
+          <input type="text" class="form-control" formControlName="prenom" name="nom" [(ngModel)]="Patient.prenom">
+          </div>
+          <div class="form-group" [formGroup]="myGroup">
+            <label >email</label>
+            <input type="text" class="form-control" formControlName="email" name="email" [(ngModel)]="Patient.email">
+            </div>
+            <div class="form-group" [formGroup]="myGroup">
+              <label >grade</label>
+              <input type="text" class="form-control" formControlName="sexe" name="sexe" [(ngModel)]="Patient.sexe">
+              </div>
+              <div class="form-group" [formGroup]="myGroup">
+                <label >maladie</label>
+                <input type="text" class="form-control" formControlName="maladie" name="maladie" [(ngModel)]="Patient.maladie">
+                </div>
+                <div class="form-group " [formGroup]="myGroup">
+                  <label >photo</label>
+                  <input (change)="onChange($event)" formControlName="photo" visbility="hidden" appearance="fill" #file type="file" name="file" accept="image/*"  [(ngModel)]="Patient.photo">
+                  </div>
+                <button class="btn btn-dark"> confirmer</button>
+    </form>
+     
+      <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Annuler</button>
+        <button mat-stroked-button (click)=" insertdataPatient()" >confirme</button>
+      </div>
+  

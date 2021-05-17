@@ -15,6 +15,7 @@ export class InscriptionComponent implements OnInit {
     Validators.required,
     Validators.email,
   ]);
+ 
   isLinear = false;
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;

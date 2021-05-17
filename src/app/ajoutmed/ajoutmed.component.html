@@ -12,8 +12,12 @@
     </mat-toolbar> 
     </div>
     <div fxLayoutAlign="space-between center"  >
-    
-    <table cellspacing="20" ><tr>
+   
+   <!-- <table cellspacing="20" >
+      <td><mat-form-field class="example-full-width" (ngSubmit)="insertData()" >
+        <mat-label>email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>      </mat-form-field></td>
       <td><mat-form-field class="example-full-width">
         <mat-label>nom</mat-label>
         <input matInput>
@@ -33,8 +37,34 @@
         <input matInput>
       </mat-form-field></td>
     </tr>
-    </table>
+
+    </table>-->
+    <form (ngSubmit)="insertData()">
+      
+      <div class="form-group">
+      <label >nom</label>
+      <input type="text" class="form-control" name="nom" [(ngModel)]="Medecin.nom">
+      </div>
+      <div class="form-group" >
+        <label >prénom</label>
+        <input type="text" class="form-control" name="nom" [(ngModel)]="Medecin.prenom">
+        </div>
+        <div class="form-group">
+          <label >email</label>
+          <input type="text" class="form-control" name="email" [(ngModel)]="Medecin.email">
+          </div>
+          <div class="form-group">
+            <label >grade</label>
+            <input type="text" class="form-control" name="grade" [(ngModel)]="Medecin.grade">
+            </div>
+            <div class="form-group">
+              <label >spécialitée</label>
+              <input type="text" class="form-control" name="spécialitée" [(ngModel)]="Medecin.specialitee">
+              </div>
+              <button class="btn btn-dark"> confirmer</button>
+  </form>
     </div></div>
     <div mat-dialog-actions>
       <button mat-button mat-dialog-close>Annuler</button>
+      <button mat-stroked-button (click)="insertData()" >confirme</button>
     </div>

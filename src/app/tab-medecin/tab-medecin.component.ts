@@ -1,4 +1,7 @@
 import { Component, OnInit , ViewChild} from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from "@angular/router";
+
 import {MatSort} from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
@@ -6,8 +9,11 @@ import { ModalComponent } from '../modal/modal.component';
 import { AjoutmedComponent } from '../ajoutmed/ajoutmed.component';
 import {DeleteMedecinComponent} from '../delete-medecin/delete-medecin.component';
 import {EditMedecinComponent } from '../edit-medecin/edit-medecin.component';
+import { HttpClient } from '@angular/common/http';
+import { DataService } from '../service/data.service';
+import {Medecin} from 'src/app/medecin'
 
-const ELEMENT_DATA: medecin[] = [
+/*const ELEMENT_DATA: medecin[] = [
   {id: 1, name: 'hanen', specialite:'cardiologue', grade: 'H'},
   {id: 2, name: 'donia', specialite:'neurologue', grade: 'He'},
   {id: 3, name: 'boutheina', specialite:'dermatologue', grade: 'Li'},
@@ -25,19 +31,28 @@ export interface medecin {
   name: string;
   
   
-  specialite: string;
+  specialitee: string;
   grade: string;
   
-}
+}*/
 @Component({
   selector: 'app-tab-medecin',
   templateUrl: './tab-medecin.component.html',
   styleUrls: ['./tab-medecin.component.css']
 })
 export class TabMedecinComponent implements OnInit {
+  id:any;
+  medecin: any;
   ngOnInit(){
+    this.getDataMedecin();
   }
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private route:ActivatedRoute,private dataService:DataService) { }
+  getDataMedecin(){
+    this.dataService.getdata().subscribe(res =>{
+      this.dataSource.data = res as Medecin[];
+    });
+
+  }
   openDialog() {
     this.dialog.open(AjoutmedComponent);
   }
@@ -51,11 +66,15 @@ export class TabMedecinComponent implements OnInit {
   }
 
 openEditMedecin(element:any){
+  //this.router.navigate(['/', 'edit{{element.id}}']);
   const dialogRef = this.dialog.open(EditMedecinComponent,{ 
   
     data:element
   
-  });
+  }
+  
+  
+  );
 
   dialogRef.afterClosed().subscribe(result => {
     console.log(`Dialog result: ${result}`);
@@ -67,6 +86,7 @@ openDeleteMedecin(element:any){
     
   }
   );
+  
 
   dialogRef.afterClosed().subscribe(result => {
     console.log(`Dialog result: ${result}`);
@@ -82,9 +102,9 @@ applyFilter(event: Event) {
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
-
-  displayedColumns: string[] = ['id','name', 'specialitée', 'grade','Edit' ,'Delete'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  ELEMENT_DATA!: Medecin[];
+  displayedColumns: string[] = ['id','nom', 'prenom','email', 'specialitee', 'grade','Edit' ,'Delete'];
+  dataSource = new MatTableDataSource<Medecin>(this.ELEMENT_DATA);
   desserts: any;
   sortedData: any;
 

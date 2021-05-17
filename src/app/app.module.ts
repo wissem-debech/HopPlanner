@@ -33,6 +33,8 @@ import { AjoutmedComponent } from './ajoutmed/ajoutmed.component';
 import { DeleteMedecinComponent } from './delete-medecin/delete-medecin.component';
 import { EditMedecinComponent } from './edit-medecin/edit-medecin.component';
 import { EditpatientComponent } from './editpatient/editpatient.component';
+import { ProfilPatientComponent} from './profil-patient/profil-patient.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -59,10 +61,12 @@ import { EditpatientComponent } from './editpatient/editpatient.component';
     AjoutmedComponent,
     DeleteMedecinComponent,
     EditMedecinComponent,
-    EditpatientComponent
+    EditpatientComponent,
+    ProfilPatientComponent,
+    EditMedecinComponent
   ],
   exports: [ 
-    ModalComponent, TabMedecinComponent, SymptomeTeteComponent,ModalajoutpatientComponent,SidebarsecretaireComponent],
+    ModalComponent, ProfilPatientComponent, TabMedecinComponent, SymptomeTeteComponent,ModalajoutpatientComponent,SidebarsecretaireComponent],
   imports: [
     FlexLayoutModule,
     MatIconModule,
@@ -75,7 +79,8 @@ import { EditpatientComponent } from './editpatient/editpatient.component';
     AppRoutingModule,
     MatangModule,
     BrowserAnimationsModule,
-    MatTreeModule
+    MatTreeModule,
+    HttpClientModule
   
   ],
   providers: [], 

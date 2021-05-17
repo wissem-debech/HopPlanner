@@ -2,15 +2,39 @@
     <div>  
         <mat-form-field appearance="outline">
             <mat-label></mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="medecin.name">
+            <input matInput placeholder="Placeholder" readonly="readonly" [(ngModel)]="Medecin.id">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-hint></mat-hint>
          </mat-form-field>
      </div>
+    <div>  
+        <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input matInput placeholder="Placeholder" [(ngModel)]="Medecin.nom">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint></mat-hint>
+         </mat-form-field>
+     </div>
+     <div>
+        <mat-form-field appearance="outline">
+            <mat-label> </mat-label>
+            <input matInput placeholder="Placeholder" [(ngModel)]="Medecin.prenom">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint></mat-hint>
+         </mat-form-field>
+    </div>
     <div>
         <mat-form-field appearance="outline">
             <mat-label> </mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="medecin.specialite">
+            <input matInput placeholder="Placeholder" [(ngModel)]="Medecin.email">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint></mat-hint>
+         </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label> </mat-label>
+            <input matInput placeholder="Placeholder" [(ngModel)]="Medecin.specialitee">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-hint></mat-hint>
          </mat-form-field>
@@ -18,13 +42,13 @@
     <div>
         <mat-form-field appearance="outline">
             <mat-label></mat-label>
-            <input matInput placeholder="Placeholder" [(ngModel)]="medecin.grade">
+            <input matInput placeholder="Placeholder" [(ngModel)]="Medecin.grade">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-hint></mat-hint>
          </mat-form-field>
     </div>
     <div fxLayoutAlign="space-around start">
-        <button mat-stroked-button (click)="openSnackBar('medecin Modifié avec succès', 'Fermer')">confirme</button>
+        <button mat-stroked-button (click)="openSnackBar('Medecin Modifié avec succès', 'Fermer')" >confirme</button>
         <button mat-button mat-dialog-close>Annuler</button>
     </div>
     </div>

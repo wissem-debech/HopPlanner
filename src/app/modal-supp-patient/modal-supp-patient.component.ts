@@ -1,6 +1,7 @@
 import { Inject } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Patient } from '../patient';
 
 @Component({
   selector: 'app-modal-supp-patient',
@@ -8,9 +9,9 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./modal-supp-patient.component.css']
 })
 export class ModalSuppPatientComponent implements OnInit {
-   patient:any
+  Patient:any;
   constructor(@Inject(MAT_DIALOG_DATA)public data:any) { 
-    this.patient=data
+    this.Patient=data
   }
 
   ngOnInit(): void {

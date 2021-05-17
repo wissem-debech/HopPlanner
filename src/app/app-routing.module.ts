@@ -11,6 +11,8 @@ import { ProfilsecretaireComponent } from './profilsecretaire/profilsecretaire.c
 import { SidebarsecretaireComponent } from './sidebarsecretaire/sidebarsecretaire.component';
 import { SymptomeTeteComponent } from './symptome-tete/symptome-tete.component';
 import { TabMedecinComponent } from './tab-medecin/tab-medecin.component';
+import { ProfilPatientComponent} from './profil-patient/profil-patient.component';
+import { EditMedecinComponent} from './edit-medecin/edit-medecin.component';
 
 const routes: Routes = [
   {path:'login' , component:LoginComponent},
@@ -24,6 +26,9 @@ const routes: Routes = [
   {path :'sidenav' , component:SidebarsecretaireComponent},
   {path :'ajoupat' , component:ButtonajoutpatientComponent},
   {path :'profilsec' , component:ProfilsecretaireComponent},
+  {path :'profilpatient' , component:ProfilPatientComponent},
+  {path :'edit/:id' , component:EditMedecinComponent},
+
 
 
 ];
